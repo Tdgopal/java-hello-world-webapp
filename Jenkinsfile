@@ -11,15 +11,12 @@ git 'https://github.com/Tdgopal/java-hello-world-webapp.git'
 stage('Compile pkg create war file'){
 
 def mvnHome = tool name: 'maven-3', type: 'maven'
-
 bat "${mvnHome}/bin/mvn package"
 }
  stage('Deploy to Tomcat'){
-bat "copy D://jid/a/test.txt 'D://jid/b/test.txt'"
+bat "copy target\\maven-helloworld.war \"${tomcatWeb}\\maven-helloworld.war\""
 }
 stage('Start Tomacat Server'){
-sleep(time : 5, unit : "second" )
-bat "D:\\Apache\\apache-tomcat-8.0.35\\bin\\startup.bat"
-sleep(time : 100, unit : "second" )
+bat "${tomcatBin}\\startup.bat"
 } 
 }
