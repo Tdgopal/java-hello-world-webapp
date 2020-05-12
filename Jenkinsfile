@@ -16,7 +16,7 @@ def name = 'maven-default'
 
 sh "${mvnHome}/bin/mvn"  'clean package'
 }
-stage('Deploy to Tomcat'){
+/* stage('Deploy to Tomcat'){
 
 bat "copy D://jid/a/test.txt 'D://jid/b/test.txt'"
 }
@@ -24,5 +24,5 @@ stage('Start Tomacat Server'){
 sleep(time : 5, unit : "second" )
 bat "D:\\Apache\\apache-tomcat-8.0.35\\bin\\startup.bat"
 sleep(time : 100, unit : "second" )
-}
+} */
 }
