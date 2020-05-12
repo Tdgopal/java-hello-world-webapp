@@ -10,7 +10,9 @@ git 'https://github.com/Tdgopal/java-hello-world-webapp.git'
 }
 stage('Compile pkg create war file'){
 
-def mvnHome = tool name: 'maven-default', type: 'maven'
+def mvnHome = 'D://apache-maven-3.6.3'
+  def name: 'maven-default'
+  def type: 'maven'
 
 bat "${mvnHome}/bin/mvn package"
 }
