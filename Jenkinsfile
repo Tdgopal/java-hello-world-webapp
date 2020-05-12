@@ -12,7 +12,7 @@ stage('Compile pkg create war file'){
 
 def mvnHome = tool name: 'maven-default', type: 'maven'
 
-bat "D://apache-maven-3.6.3/bin/mvn package"
+bat "${mvnHome}/bin/mvn package"
 }
 stage('Deploy to Tomcat'){
 
