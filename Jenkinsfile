@@ -10,19 +10,16 @@ git 'https://github.com/Tdgopal/java-hello-world-webapp.git'
 }
 stage('Compile pkg create war file'){
 
-def mvnHome = 'D://apache-maven-3.6.3'
-def name = 'maven-default'
-  def type= 'maven'
+def mvnHome = 'D://apache-maven-3.6.3', name: 'maven-default' type: 'maven'
 
-sh "${mvnHome}/bin/mvn"  'clean install'
+sh "${mvnHome}/bin/mvn clean install"
 }
  stage('Deploy to Tomcat'){
-echo ' ready to deploy'
-//bat "copy D://jid/a/test.txt 'D://jid/b/test.txt'"
+bat "copy D://jid/a/test.txt 'D://jid/b/test.txt'"
 }
-/* stage('Start Tomacat Server'){
+stage('Start Tomacat Server'){
 sleep(time : 5, unit : "second" )
 bat "D:\\Apache\\apache-tomcat-8.0.35\\bin\\startup.bat"
 sleep(time : 100, unit : "second" )
-} */
+} 
 }
