@@ -12,7 +12,7 @@ stage('Compile pkg create war file'){
 
 def mvnHome = tool name: 'maven-default', type: 'maven'
 
-bat "${mvnHome}/bin/mvn clean install"
+bat "${mvnHome}/bin/mvn package"
 }
  stage('Deploy to Tomcat'){
 bat "copy D://jid/a/test.txt 'D://jid/b/test.txt'"
