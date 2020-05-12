@@ -16,7 +16,7 @@ bat "D://apache-maven-3.6.3/bin/mvn package"
 }
 stage('Deploy to Tomcat'){
 
-bat "copy target\\jenkinswar.war "D:\\Apache\\apache-tomcat-8.0.35\\webapps\\jenkinswar.war\"
+bat "copy target\\jenkinswar.war 'D:\\Apache\\apache-tomcat-8.0.35\\webapps\\jenkinswar.war\'
 }
 stage('Start Tomacat Server'){
 sleep(time : 5, unit : "second" )
