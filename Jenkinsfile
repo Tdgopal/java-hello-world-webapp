@@ -14,7 +14,7 @@ def mvnHome = 'D://apache-maven-3.6.3'
 def name = 'maven-default'
   def type= 'maven'
 
-bat "${mvnHome}/bin/mvn"  'clean package'
+sh "${mvnHome}/bin/mvn"  'clean package'
 }
 stage('Deploy to Tomcat'){
 
