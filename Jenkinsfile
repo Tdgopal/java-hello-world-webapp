@@ -16,7 +16,7 @@ bat "D://apache-maven-3.6.3/bin/mvn package"
 }
 stage('Deploy to Tomcat'){
 
-bat "copy D://jid/a/test.txt 'D://jid/b/test.txt'
+bat "copy D://jid/a/test.txt 'D://jid/b/test.txt'"
 }
 stage('Start Tomacat Server'){
 sleep(time : 5, unit : "second" )
