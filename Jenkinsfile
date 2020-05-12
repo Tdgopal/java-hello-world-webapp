@@ -14,13 +14,13 @@ def mvnHome = 'D://apache-maven-3.6.3'
 def name = 'maven-default'
   def type= 'maven'
 
-sh "${mvnHome}/bin/mvn"  'clean package'
+sh "${mvnHome}/bin/mvn"  'clean install'
 }
-/* stage('Deploy to Tomcat'){
-
-bat "copy D://jid/a/test.txt 'D://jid/b/test.txt'"
+ stage('Deploy to Tomcat'){
+echo ' ready to deploy'
+//bat "copy D://jid/a/test.txt 'D://jid/b/test.txt'"
 }
-stage('Start Tomacat Server'){
+/* stage('Start Tomacat Server'){
 sleep(time : 5, unit : "second" )
 bat "D:\\Apache\\apache-tomcat-8.0.35\\bin\\startup.bat"
 sleep(time : 100, unit : "second" )
